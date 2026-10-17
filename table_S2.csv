@@ -1,0 +1,46 @@
+#,Paper,Year,Setting,Human,Task type,Primary metric,Guar.
+1,Kadavath et al.,2022,single,-,mixed,calibration,-
+2,Manakul et al.\ (SelfCheckGPT),2023,single,-,open-ended,discrimination,-
+3,Kuhn et al.,2023,single,-,open-ended,discrimination,-
+4,He et al.,2026,single,-,n/a,n/a,-
+5,Zhang et al.\ (SELAUR),2026,agentic,-,non-QA,other,-
+6,Oh et al.,2026,agentic,-,non-QA,discrimination,-
+7,Geng et al.,2024,single,-,n/a,n/a,-
+8,Donkers and Ziegler,2026,single,yes,non-QA,other,-
+9,Shorinwa et al.,2025,single,-,n/a,n/a,-
+10,Shrivastava et al.,2025,single,-,fixed-choice,discrimination,-
+11,Zhang et al.\ (SAC3),2023,single,-,mixed,discrimination,-
+12,Nikitin et al.,2024,single,-,open-ended,discrimination,-
+13,Xiong et al.,2024,single,-,mixed,discrimination,-
+14,Duan et al.\ (SAR),2024,single,-,open-ended,discrimination,-
+15,Vashurin et al.,2025,single,-,mixed,discrimination,-
+16,Kirchhof et al.,2025,single,-,n/a,n/a,-
+17,Fadeeva et al.,2024,single,-,open-ended,discrimination,-
+18,Lin et al.\ (Generating with Confidence),2024,single,-,open-ended,discrimination,-
+19,Quevedo et al.,2025,single,-,open-ended,other,-
+20,Abbasi-Yadkori et al.,2024,single,-,open-ended,coverage/risk,yes
+21,Tayebati et al.,2025,single,-,fixed-choice,coverage/risk,yes
+22,Pesaranghader and Li,2026,single,-,n/a,n/a,-
+23,Rubashevskii et al.,2026,single,-,mixed,coverage/risk,yes
+24,Devic et al.,2025,single,-,n/a,n/a,-
+25,Lin et al.\ (Teaching Models),2022,single,-,open-ended,calibration,-
+26,Azaria and Mitchell,2023,single,-,mixed,other,-
+27,Burns et al.,2023,single,-,fixed-choice,other,-
+28,Farquhar et al.,2024,single,-,open-ended,discrimination,-
+29,Kossen et al.,2024,single,-,open-ended,discrimination,-
+30,"M\""undler et al.",2024,single,-,open-ended,other,-
+31,Ye et al.,2024,single,-,mixed,coverage/risk,yes
+32,Li et al.\ (ITI),2023,single,-,mixed,other,-
+33,Ren et al.\ (KnowNo),2023,agentic,-,non-QA,coverage/risk,yes
+34,Quach et al.,2024,single,-,open-ended,coverage/risk,yes
+35,Duan et al.\ (UProp),2025,agentic,-,non-QA,discrimination,-
+36,Zhao et al.\ (SAUP),2025,agentic,-,non-QA,discrimination,-
+37,Han et al.\ (UALA),2024,agentic,-,non-QA,other,-
+38,Bel\'em et al.,2024,single,yes,non-QA,other,-
+39,Kim et al.,2024,single,yes,non-QA,other,-
+40,Liu et al.,2025,single,-,fixed-choice,calibration,-
+41,Orgad et al.,2025,single,-,open-ended,discrimination,-
+42,Chen et al.,2026,single,-,open-ended,discrimination,-
+43,Badshah et al.,2026,single,-,open-ended,coverage/risk,yes
+44,Villavicencio et al.,2026,single,yes,non-QA,other,-
+45,Ulmer et al.,2026,single,-,open-ended,calibration,-

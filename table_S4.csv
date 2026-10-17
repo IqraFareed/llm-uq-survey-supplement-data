@@ -1,0 +1,127 @@
+Record (abbreviated title),Identifier,Disposition,Pillar
+INSIDE,arXiv 2402.03744,Eligible (new),Det.
+Benchmarking Uncertainty with MCQ,arXiv 2406.12784,Eligible (new),Det.
+LLM Internal States Reveal Hallucination Risk,arXiv 2407.03282,Eligible (new),Det.
+Universal Truthfulness Hyperplane,arXiv 2407.08582,Eligible (new),Det.
+LLMs Know More Than They Show,arXiv 2410.02707,Added to corpus after search,Det.
+DiverseAgentEntropy,arXiv 2412.09572,Eligible (new),Det.
+UQ for Language Models: Scorers Suite,arXiv 2504.19254,Eligible (new),Det.
+Token-Level UQ for LLM Reasoning,arXiv 2505.11737,Eligible (new),Det.
+Are the Hidden States Hiding Something?,arXiv 2505.16520,Eligible (new),Det.
+Revisiting Uncertainty Estimation and Calibration,arXiv 2505.23854,Eligible (new),Det.
+Consistency Hypothesis in UQ for LLMs,arXiv 2506.21849,Eligible (new),Det.
+Rehearse,arXiv 2508.14390,Eligible (new),Det.
+Calibrating Verbalized Confidence with Distractors,arXiv 2509.25532,Eligible (new),Det.
+Do LLMs Really Know What They Dont Know?,arXiv 2510.09033,Eligible (new),Det.
+ADVICE,arXiv 2510.10913,Eligible (new),Det.
+Systematic Evaluation of UE Methods,arXiv 2510.20460,Eligible (new),Det.
+Probabilities Are All You Need,arXiv 2511.07694,Eligible (new),Det.
+Mathematical Analysis of Hallucination Dynamics,arXiv 2511.15005,Eligible (new),Det.
+Fact-Checking via Probabilistic Certainty and Consistency,arXiv 2601.02574,Eligible (new),Det.
+Semantic UQ of Hallucinations: Quantum Tensor Network,arXiv 2601.20026,Eligible (new),Det.
+Benchmarking Calibration in Long-Form QA,arXiv 2602.00279,Eligible (new),Det.
+Benchmark of Uncertainty Metrics for Automatic Grading,arXiv 2602.16039,Eligible (new),Det.
+UE Scales with Sampling in Reasoning Models,arXiv 2603.19118,Eligible (new),Det.
+Adaptive Bayesian Estimation of Semantic Entropy,arXiv 2603.22812,Eligible (new),Det.
+Closing the Confidence-Faithfulness Gap,arXiv 2603.25052,Eligible (new),Det.
+UQ for LLM Function-Calling,arXiv 2604.22985,Eligible (new),Det.
+ORCE,arXiv 2605.12446,Eligible (new),Det.
+UQ for Large Language Diffusion Models,arXiv 2605.14570,Eligible (new),Det.
+MultiHaluDet,arXiv 2605.24919,Eligible (new),Det.
+Entropy Distribution as Fingerprint for Hallucinations,arXiv 2605.28264,Eligible (new),Det.
+BEACON,arXiv 2606.07528,Eligible (new),Det.
+Systematic Evaluation of Black-Box UE,arXiv 2606.19868,Eligible (new),Det.
+The Origins of Stochasticity: UQ for LLMs,arXiv 2606.22792,Eligible (new),Det.
+Hallucination Detection using Diversion Decoding,arXiv 2607.10476,Eligible (new),Det.
+ConfidenceBench,arXiv 2607.20526,Eligible (new),Det.
+Propagating Uncertainty Across Reasoning and Retrieval,arXiv 2607.25600,Eligible (new),Det.
+Claim-Level Confidence Calibration,arXiv 2608.22483,Eligible (new),Det.
+Truthfulness Signal in Code-Mixing,arXiv 2609.22138,Eligible (new),Det.
+Cross-Model Span-Level Hallucination Detection,arXiv 2610.02066,Eligible (new),Det.
+UQ of LLMs through Multiple Uncertainty Sources,"ACL Findings 2026, 2026.findings-acl.535",Added to corpus after search,Det.
+Beyond Semantic Entropy,"ACL Findings 2025, 2025.findings-acl.234",Eligible (new),Det.
+Can LLMs Learn Uncertainty on Their Own?,"EMNLP 2024, 2024.emnlp-main.1205",Eligible (new),Det.
+UQ for In-Context Learning of LLMs,"NAACL 2024, 2024.naacl-long.184",Eligible (new),Det.
+Consistency-based Black-box UQ for Text-to-SQL,OpenReview ofiZbAmrZh,Eligible (new),Det.
+Humans Overrely on Overconfident LMs,arXiv 2507.06306,Eligible (new),HC\,A
+What Verbalized Uncertainty in Language Models is Missing,arXiv 2507.10587 (TACL 2026 version cited),Added to corpus after search,HC\,A
+Can LLMs Express Uncertainty Like Human?,arXiv 2509.24202,Eligible (new),HC\,A
+Agentic Uncertainty Quantification,arXiv 2601.15703,Eligible (new),HC\,A
+Agentic Confidence Calibration,arXiv 2601.15778,Eligible (new),HC\,A
+LLMs Should Express Uncertainty Explicitly,arXiv 2604.05306,Eligible (new),HC\,A
+UQ of LLM Multi-Agent Systems (Tensor Decomposition),arXiv 2604.08708,Eligible (new),HC\,A
+Proper Scoring Rules for Agentic UQ,arXiv 2605.24756,Eligible (new),HC\,A
+Knowing but Not Showing,arXiv 2605.25284,Eligible (new),HC\,A
+Not All Uncertainty Is Equal,arXiv 2605.28571 (FAccT 2026 version cited),Added to corpus after search,HC\,A
+Linguistic Uncertainty Markers and Intrinsic Confidence,arXiv 2605.28778,Eligible (new),HC\,A
+Confidence Laundering in Agent Systems,arXiv 2606.20662,Eligible (new),HC\,A
+U-Lens,arXiv 2607.10604,Eligible (new),HC\,A
+Trajectory-Adapted UQ for LLM Agents,arXiv 2608.11552,Eligible (new),HC\,A
+Relational Uncertainty Propagation for Agents,arXiv 2608.16002,Eligible (new),HC\,A
+PropUQ-MAS,arXiv 2608.22130,Eligible (new),HC\,A
+UQ for LLM Agents: Taxonomy and Empirical Study,arXiv 2609.07395,Eligible (new),HC\,A
+Do Agents Know When They Succeed?,arXiv 2609.09448,Eligible (new),HC\,A
+GRUET,arXiv 2609.24831,Eligible (new),HC\,A
+Clarify the User or Verify the World?,arXiv 2609.32255,Eligible (new),HC\,A
+Structured Uncertainty guided Clarification,"ACL Findings 2026, 2026.findings-acl.2028",Eligible (new),HC\,A
+Impact of LMs Reluctance to Express Uncertainty,"ACL 2024, 2024.acl-long.198",Eligible (new),HC\,A
+Confronting verbalized uncertainty (IJHCS),"IJHCS vol. 197, 103455",Eligible (new),HC\,A
+Selective Generation for Controllable Language Models,arXiv 2307.09254,Eligible (new),Mit.
+When Do LLMs Need Retrieval Augmentation?,arXiv 2402.11457,Eligible (new),Mit.
+Adaptive Retrieval without Self-Knowledge?,arXiv 2501.12835,Eligible (new),Mit.
+Rewarding Doubt,arXiv 2503.02623,Eligible (new),Mit.
+Do not Abstain! Identify and Solve the Uncertainty,arXiv 2506.00780,Eligible (new),Mit.
+Beyond Binary Rewards,arXiv 2507.16806,Eligible (new),Mit.
+TECP: Token-Entropy Conformal Prediction,arXiv 2509.00461,Eligible (new),Mit.
+Selective Risk Certification via Information-Lift,arXiv 2509.12527,Eligible (new),Mit.
+Domain-Shift-Aware Conformal Prediction for LLMs,arXiv 2510.05566,Eligible (new),Mit.
+Behaviorally Calibrated RL,arXiv 2512.19920,Eligible (new),Mit.
+Calibration Aware RL,arXiv 2601.13284,Eligible (new),Mit.
+Black-Box Reliability Certification for Agents,arXiv 2602.21368,Eligible (new),Mit.
+I-CALM,arXiv 2604.03904,Eligible (new),Mit.
+Geometry-Calibrated Conformal Abstention,arXiv 2604.27914,Eligible (new),Mit.
+Calibrating LLMs with Semantic-level Reward,arXiv 2605.15588,Eligible (new),Mit.
+Agentic Tool-Calling via Uncertainty-Aligned RL,arXiv 2606.06976,Eligible (new),Mit.
+RL with Metacognitive Feedback,arXiv 2606.32032,Eligible (new),Mit.
+Uncertainty-Aware Abstention with Provable Guarantees,arXiv 2607.04430,Eligible (new),Mit.
+Hierarchical Group-Conditional Conformal Risk Control,arXiv 2607.24562,Eligible (new),Mit.
+"Judge, Retrieve, or Abstain",arXiv 2608.17994,Added to corpus after search,Mit.
+Can Language Models Learn When to Abstain?,arXiv 2610.13821,Eligible (new),Mit.
+Kuhn semantic uncertainty,arXiv 2302.09664,Already in corpus,-
+Geng survey,arXiv 2311.08298,Already in corpus,-
+Ye benchmarking via UQ,arXiv 2401.12794,Already in corpus,-
+Mitigating Hallucinations via Conformal Abstention,arXiv 2405.01563,Already in corpus,-
+Learning Conformal Abstention Policies (also OpenReview version),arXiv 2502.06884,Already in corpus,-
+Kirchhof position paper,arXiv 2505.22655,Already in corpus,-
+Hallucination Detection and Mitigation in LLMs,arXiv 2601.09929,Already in corpus,-
+UQ in LLM Agents: Foundations (Oh et al.),arXiv 2602.05073,Already in corpus,-
+Shorinwa survey,doi 10.1145/3744238,Already in corpus,-
+"Kim et al. I am Not Sure, But",arXiv 2405.00623,Already in corpus,-
+Donkers polarized discourse,doi 10.1145/3774935.3806174,Already in corpus,-
+LM-Polygraph,arXiv 2406.15627,Already in corpus,-
+UQ and Confidence Calibration: A Survey,arXiv 2503.15850,Excluded: survey/review,-
+Disambiguation in Conv. QA: Survey,arXiv 2505.12543,Excluded: survey/review,-
+Theoretical Foundations and Mitigation of Hallucination,arXiv 2507.22915,Excluded: survey/review,-
+LLM Hallucination: A Comprehensive Survey,arXiv 2510.06265,Excluded: survey/review,-
+"UQ for Hallucination Detection: Foundations, Methodology",arXiv 2510.12040,Excluded: survey/review,-
+Uncertainty-Aware Decision Making in MLLMs: Survey,arXiv 2608.17084,Excluded: survey/review,-
+Survey of UE Methods on LLMs,"ACL Findings 2025, 2025.findings-acl.1101",Excluded: survey/review,-
+UQ for Large Language Models (book chapter),doi 10.1007/978-3-032-21321-1_7,Excluded: survey/review,-
+Abstention Knobs for Video QA,arXiv 2601.00138,Excluded: multimodal,-
+UQ for Multimodal LLMs (semantic volume),arXiv 2602.24195,Excluded: multimodal,-
+Segmentation-Based Attention Entropy (vision-language),arXiv 2603.16558,Excluded: multimodal,-
+Look Again Before You Abstain (vision-language),arXiv 2606.16667,Excluded: multimodal,-
+Training-Free UE in Multimodal LLMs,arXiv 2609.22206,Excluded: multimodal,-
+VL-Calibration (vision-language),"ACL 2026, 2026.acl-long.2074",Excluded: multimodal,-
+Learning to Ask (unclear instruction),arXiv 2409.00557,Excluded: off topic,-
+ClarQ-LLM,arXiv 2409.06097,Excluded: off topic,-
+Quantifying Uncertainty in LLM Benchmark Scores,arXiv 2410.03492,Excluded: off topic,-
+Curiosity by Design,arXiv 2507.21285,Excluded: off topic,-
+Prospect Theory for LLMs,arXiv 2508.08992,Excluded: off topic,-
+Unidentified reward-pipeline record,arXiv 2603.06317,Excluded: off topic,-
+Seeing the Reasoning: Rationales and Trust,arXiv 2603.07306,Excluded: off topic,-
+Conformal Selective Prediction with General Risk Control,arXiv 2603.24704,Excluded: off topic,-
+"Label Effects: Trust, LLM-as-a-Judge",arXiv 2604.05593,Excluded: off topic,-
+ASPI prompt injection,arXiv 2605.17324,Excluded: off topic,-
+LLM or Human? Trust in Research Summaries,doi 10.1145/3772318.3793386,Excluded: off topic,-
+Unidentified OpenReview PDF,OpenReview PDF (title not shown),Excluded: off topic,-
