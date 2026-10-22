@@ -1,0 +1,9 @@
+#,Query string,Purpose
+1,Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty RLCR arxiv pdf,Locate full text (item 69)
+2,Revisiting Uncertainty Estimation and Calibration of Large Language Models arXiv 2505.23854 pdf,Locate full text (item 9)
+3,Kapoor Large language models must be taught to know what they don't know arxiv 2406.08391 html full text,"Verify existence and locate full text (foundational, not in update search)"
+4,Can LLMs Learn Uncertainty on Their Own? Expressing Uncertainty Effectively in a Self-Training Manner EMNLP 2024,Locate text (item 40); only abstract found
+5,Relying on the Unreliable: The Impact of Language Models' Reluctance to Express Uncertainty Zhou Jurafsky Hashimoto ACL 2024 arxiv,Locate full text (item 62)
+6,Steyvers Tejeda Kumar Belem Karny Hu Mayer Smyth large language models know what people think they know calibration gap discrimination gap,"Verify title and venue (foundational, not in update search)"
+7,"""Adaptive Retrieval without Self-Knowledge? Bringing Uncertainty Back Home"" ACL 2025",Verify venue (item 66)
+8,"""Revisiting Uncertainty Estimation and Calibration of Large Language Models"" NeurIPS 2025 Tao Yeh Dong Huang Torr Xu",Verify venue (item 9)

@@ -69,7 +69,7 @@
 
 \microtypesetup{expansion=false,protrusion=false}
 
-\title{Online Supplement to ``Survey of Uncertainty Quantification in Large Language Models: Detection, Mitigation, and Human-Centered and Agentic Perspectives''}
+\title{Supplementary Material to ``Survey of Uncertainty Quantification in Large Language Models: Detection, Mitigation, and Human-Centered and Agentic Perspectives''}
 
 \author{Iqra Fareed}
 \affiliation{%
@@ -90,7 +90,7 @@
 
 
 \begin{abstract}
-This document is the online supplement to the survey article of the same title. It is not part of the article. It contains the per-paper literature matrix (Table~S1), the per-paper coding table (Table~S2), the update-search log (Table~S3), the disposition of the 126 distinct records returned by that search (Table~S4), and the cost and deployment table by method family (Table~S5). Section and table numbers cited as ``of the article'' refer to the article.
+This document is the supplementary material to the survey article of the same title. It is not part of the article. It contains the per-paper literature matrix (Table~S1), the per-paper coding table (Table~S2), the update-search log (Table~S3), the disposition of the 126 distinct records returned by that search (Table~S4), and the cost and deployment table by method family (Table~S5). Section and table numbers cited as ``of the article'' refer to the article.
 \end{abstract}
 
 \keywords{uncertainty quantification, large language models, hallucination detection, calibration, conformal prediction, human-centered uncertainty quantification}
@@ -205,6 +205,30 @@ This document is the online supplement to the survey article of the same title. 
 \midrule
 45 & Anthropomimetic Uncertainty (Ulmer, Lorson, Titov, Hardmeier) & Verbalized uncertainty in LLMs ignores how humans communicate uncertainty & Argument paper combining a review of 53 papers with experiments on six commercial LLMs & 61\% of reviewed methods use numerical expressions and 78\% prompting; verbalization varies widely with model, speaker--listener relationship, and subject; calibration errors up to 44\% & English only; correctness judged by an LLM plus heuristics; no participant data of its own; no access to pretraining data   \\
 \midrule
+46 & Just Ask for Calibration (Tian, Mitchell, Zhou, Sharma, Rafailov, Yao, Finn, Manning) & How can calibrated confidence be elicited from models tuned with human feedback, whose token probabilities are often poorly calibrated? & Self-verbalized: one- and two-stage numeric and linguistic confidence compared with label probability & Verbalized confidences typically better calibrated than conditional probabilities, often reducing ECE by a relative 50\% or more (gpt-3.5-turbo, gpt-4, claude-1, claude-2, Llama-2-70b-chat; TriviaQA, SciQ, TruthfulQA); RLHF generally worsens Llama-2-70B log-probability calibration & Short-form factual QA only; correctness judged by an LLM equivalence check; gains less consistent for Llama-2-70b-chat; claude-1 weaker at verbalizing; venue taken from search listing (EMNLP 2023), not stated on the preprint \\
+\midrule
+47 & Large Language Models Must Be Taught to Know What They Don't Know (Kapoor, Gruver, Roberts, Collins, Pal, Bhatt, Weller, Dooley, Goldblum, Wilson) & Is prompting enough to obtain calibrated uncertainty, or must it be trained? & Calibration tuning: a probe, LoRA, or LoRA+prompt estimator trained on about 20,000 graded answers from 16 benchmarks, with a divergence regularizer & Mean over six base models: ECE 29.9\% to 10.8\% and AUROC 70.2\% to 71.6\% with the regularizer; about 1,000 labeled examples beat simpler baselines; transfers to SelfAware; user study N=181 & Needs a second model alongside the answering model; fact-based questions only; calibration worse for some models on a 62-question coding set; user study preliminary; read via a paraphrasing tool, numbers to be spot-checked \\
+\midrule
+48 & INSIDE: LLMs' Internal States Retain the Power of Hallucination Detection (Chen, Liu, Chen, Gu, Wu, Tao, Fu, Ye) & Logit- and consistency-based detection lose semantic information in token decoding & EigenScore on the covariance of sampled responses' embeddings plus test-time feature clipping (white-box, sampling-based) & Higher AUROC than perplexity, length-normalized entropy, and lexical similarity in most settings on CoQA, SQuAD, NQ, TriviaQA with LLaMA and OPT models (LLaMA-7B CoQA: 80.4 with clipping vs 68.7 for length-normalized entropy); clipping adds at most 1.8 AUROC points & Needs internal states, so no black-box use; needs multiple generations \\
+\midrule
+49 & Revisiting Uncertainty Estimation and Calibration of LLMs (Tao, Yeh, Dong, Huang, Torr, Xu) & How do token-probability, numerical verbalized, and linguistic verbalized uncertainty compare across many models? & Benchmarking three black-box single-pass methods on MMLU-Pro across 80 models (0.6B to 671B) & Linguistic verbalized uncertainty strongest on calibration and discrimination; high accuracy does not imply reliable uncertainty; better on reasoning than knowledge-heavy tasks; good calibration does not necessarily give good error ranking & Three single-pass methods and one benchmark; preprint cited (a NeurIPS 2025 listing was seen, not verified) \\
+\midrule
+50 & Language Models with Conformal Factuality Guarantees (Mohri, Hashimoto) & Can a correctness guarantee be given for free-form LM output? & Conformal prediction over claims: score sub-claims, back off by removing the least certain until the calibrated threshold is met & With GPT-4 on FActScore, NaturalQuestions, MATH: 80-90\% correctness guarantees while keeping most sub-claims (introduction: 30\% to 80\%, 78\% to 93\%, 75\% to 95\%) & Exchangeability; binary entailment judgment; scores from prompting; guarantee on every output may be impossible; text we read stopped partway through Section 4 \\
+\midrule
+51 & Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty (Damani, Puri, Slocum, Shenfeld, Choshen, Kim, Andreas) & Can RL teach a model to give calibrated confidence without losing accuracy? & RLCR: correctness reward minus a Brier penalty on verbalized confidence (GRPO) & Qwen2.5-7B on HotpotQA: accuracy 62.1\% vs 63.0\% for a correctness-only reward; in-domain ECE 0.37 to 0.03; out-of-domain ECE (six datasets) 0.46 to 0.21 & Out-of-domain calibration error still high in absolute terms; confidence summed across answers can exceed 1; SFT+RLCR lost out-of-domain accuracy \\
+\midrule
+52 & Can LLMs Learn Uncertainty on Their Own? (Liu, Li, Liu, Zhan, Wong, Chao, Zhang) & Can a model be taught to express uncertainty that matches its own generation uncertainty? & Uncertainty-aware instruction tuning (UaIT) of LLaMA2 and Mistral & Abstract only: 45.2\% improvement in uncertainty-expression effectiveness (baseline not stated); reasonable out-of-domain generalization & Only the abstract and proceedings entry were available to us; datasets, baselines, and limitations not stated \\
+\midrule
+53 & Adaptive Retrieval Without Self-Knowledge? (Moskvoretskii, Lysyuk, Salnikov, Ivanov, Pletenev, Galimzianova, Krayko, Konovalov, Nikishina, Panchenko) & Do adaptive-retrieval pipelines beat using an uncertainty score as the retrieval trigger? & Comparison of 8 adaptive-retrieval methods and 27 uncertainty estimators on 6 QA datasets, 10 metrics & Uncertainty triggers comparable to dedicated pipelines with fewer retrieval and LM calls, not uniformly on multi-hop (2WikiMultiHopQA: best 0.384 vs 0.454 for AdaptiveRAG); no method dominates all axes & One model (LLaMA 3.1-8b-instruct); six datasets \\
+\midrule
+54 & Agentic Confidence Calibration (Zhang, Xiong, Wu) & How can confidence be calibrated over a whole agent trajectory? & Holistic Trajectory Calibration (HTC): 48 trajectory features, regularized linear model; a general calibrator (GAC) is also proposed & Eight benchmarks; reduced variant has the lowest ECE and Brier score in the main table (HLE ECE 0.031 vs 0.656 for verbalized confidence); on HLE the full variant AUROC 0.617 is below a temperature-scaled baseline 0.628 & Labels from an LLM judge (reported 90-95\% agreement with experts on a subset); GAC results and limitations not in the text we could access \\
+\midrule
+55 & Every Response Counts: Quantifying Uncertainty of LLM-based Multi-Agent Systems through Tensor Decomposition (Chen, Yao, Chen, Papalexakis, Wei) & How can uncertainty be quantified for multi-agent runs? & MATU: embed intermediate outputs of sampled runs, ragged tensor, PARAFAC2, reconstruction loss as score & Highest AUROC and AUARC in the rows we checked across Camel, AutoGen, AnyMac on MATH, MoreHopQA, MMLU, HumanEval (MATH/GPT-4o/Camel: 0.6797 vs 0.5825); small margin on MoreHopQA (0.5555 vs 0.5480) & Cost grows linearly with sampled runs (10 here); bounded by embedding-model quality \\
+\midrule
+56 & What Large Language Models Know and What People Think They Know (Steyvers, Tejeda, Kumar, Belem, Karny, Hu, Mayer, Smyth) & Do people's confidence in LLM answers match the models' reliability? & Human study, 301 participants (Prolific), MMLU and TriviaQA, with explanations varied in uncertainty language and length & Model AUC 0.751/0.746/0.781 (GPT-3.5/PaLM2/GPT-4o) vs human 0.589/0.602/0.592; people mainly overconfident on multiple choice; confidence-aligned explanations narrowed both gaps but did not improve participant accuracy & Multiple-choice and short-answer only; explanations needed two prompts; causes untested; no venue found beyond arXiv \\
+\midrule
+57 & Relying on the Unreliable (Zhou, Hwang, Ren, Sap) & How do LMs' confident wording and reluctance to hedge affect user reliance? & Audit of nine LMs on 284 MMLU questions (49 prompts) plus a trivia-game reliance study (25 participants per setting) & Confident-sounding answers wrong 47\% of the time; users relied on 73\% of an overconfident model's incorrect confident answers; performance 76\% in miscalibrated vs 86\% in calibrated rounds; reward-model scores favor plain statements over uncertain wording & English only; U.S. participants; regex-coded markers; MMLU and capital-city trivia only \\
+\midrule
 \end{longtable}
 
 {\small
@@ -265,15 +289,30 @@ This document is the online supplement to the survey article of the same title. 
 43 & Badshah et al. & 2026 & single & -- & open-ended & coverage/risk & yes \\
 44 & Villavicencio et al. & 2026 & single & yes & non-QA & other & -- \\
 45 & Ulmer et al. & 2026 & single & -- & open-ended & calibration & -- \\
+46 & Tian et al. & 2023 & single & -- & open-ended & calibration & -- \\
+47 & Kapoor et al. & 2024 & single & yes & mixed & calibration & -- \\
+48 & Chen et al.\ (INSIDE) & 2024 & single & -- & open-ended & discrimination & -- \\
+49 & Tao et al. & 2025 & single & -- & fixed-choice & calibration & -- \\
+50 & Mohri and Hashimoto & 2024 & single & -- & open-ended & coverage/risk & yes \\
+51 & Damani et al. & 2026 & single & -- & mixed & calibration & -- \\
+52 & Liu et al.\ (UaIT) & 2024 & single & -- & open-ended & other & -- \\
+53 & Moskvoretskii et al. & 2025 & single & -- & open-ended & other & -- \\
+54 & Zhang et al.\ (HTC) & 2026 & agentic & -- & non-QA & calibration & -- \\
+55 & Chen et al.\ (MATU) & 2026 & agentic & -- & non-QA & discrimination & -- \\
+56 & Steyvers et al. & 2024 & single & yes & mixed & calibration & -- \\
+57 & Zhou et al. & 2024 & single & yes & mixed & other & -- \\
 \end{longtable}
 }
 
 \smallskip
 \noindent\emph{Notes on judgment calls for papers 43--45.} Badshah et al.\ (43) are coded open-ended because the judged answers are generated answers to open-domain questions, although the paper does not describe them as free-form and the judge itself outputs a binary verdict. Villavicencio et al.\ (44) are coded non-QA because the task is human verification behavior, as for Bel\'em et al.\ and Kim et al. Ulmer et al.\ (45) are coded calibration because the paper names no single headline result and its introduction summarizes its experiments by calibration errors of up to 44\%, and open-ended because the only answer format it states is free text (TriviaQA); the answer format of its MMLU experiment is not stated.
 
+\smallskip
+\noindent\emph{Notes on judgment calls for papers 46--57.} Steyvers et al.\ (56) and Tao et al.\ (49) report calibration and discrimination together and are coded by their calibration result; Kapoor et al.\ (47) and Damani et al.\ (51) are coded calibration because their headline result is ECE. Kapoor et al.\ (47), Steyvers et al.\ (56), and Zhou et al.\ (57) are coded as human-subjects studies because the authors collect participants' behavior; Kapoor et al.'s study is an appendix experiment the authors call preliminary. Task type is coded from the datasets the paper names: Tian et al.\ (46), INSIDE (48), Mohri and Hashimoto (50), UaIT (52, from its abstract), and Moskvoretskii et al.\ (53) as open-ended; Tao et al.\ (49) as fixed-choice (MMLU-Pro); Kapoor et al., Damani et al., Steyvers et al., and Zhou et al.\ as mixed. Liu et al.\ (52) and Moskvoretskii et al.\ (53) are coded other because their headline measures are an expression-effectiveness score (abstract only) and answer quality with efficiency. Year is the year in the reference list; Steyvers et al.\ (arXiv 2024) and Tao et al.\ (arXiv 2025) are cited as preprints.
+
 
 \bigskip
-\noindent\textbf{Table S3. Update-search log (searched 14 October 2026).} Sources: arxiv.org, aclanthology.org, dl.acm.org, openreview.net. Up to ten results per query; screened by title and snippet only; four of the papers it found were later added to the corpus (Section~2 of the article, fourth stage).
+\noindent\textbf{Table S3. Update-search log (searched 14 October 2026).} Sources: arxiv.org, aclanthology.org, dl.acm.org, openreview.net. Up to ten results per query; screened by title and snippet only; four of the papers it found were added to the corpus in the fourth stage and eight more, from the 83 records left unread, in the fifth (Section~2 of the article; Table~S6).
 \begin{center}
 \small
 \begin{tabular}{@{}r p{9.5cm}@{}}
@@ -313,7 +352,7 @@ This document is the online supplement to the survey article of the same title. 
 \textbf{Record (abbreviated title)} & \textbf{Identifier} & \textbf{Disposition} & \textbf{Pillar} \\
 \midrule
 \endhead
-INSIDE & arXiv 2402.03744 & Eligible (new) & Det. \\
+INSIDE & arXiv 2402.03744 & Added to corpus (stage 5) & Det. \\
 Benchmarking Uncertainty with MCQ & arXiv 2406.12784 & Eligible (new) & Det. \\
 LLM Internal States Reveal Hallucination Risk & arXiv 2407.03282 & Eligible (new) & Det. \\
 Universal Truthfulness Hyperplane & arXiv 2407.08582 & Eligible (new) & Det. \\
@@ -322,7 +361,7 @@ DiverseAgentEntropy & arXiv 2412.09572 & Eligible (new) & Det. \\
 UQ for Language Models: Scorers Suite & arXiv 2504.19254 & Eligible (new) & Det. \\
 Token-Level UQ for LLM Reasoning & arXiv 2505.11737 & Eligible (new) & Det. \\
 Are the Hidden States Hiding Something? & arXiv 2505.16520 & Eligible (new) & Det. \\
-Revisiting Uncertainty Estimation and Calibration & arXiv 2505.23854 & Eligible (new) & Det. \\
+Revisiting Uncertainty Estimation and Calibration & arXiv 2505.23854 & Added to corpus (stage 5) & Det. \\
 Consistency Hypothesis in UQ for LLMs & arXiv 2506.21849 & Eligible (new) & Det. \\
 Rehearse & arXiv 2508.14390 & Eligible (new) & Det. \\
 Calibrating Verbalized Confidence with Distractors & arXiv 2509.25532 & Eligible (new) & Det. \\
@@ -354,16 +393,16 @@ Truthfulness Signal in Code-Mixing & arXiv 2609.22138 & Eligible (new) & Det. \\
 Cross-Model Span-Level Hallucination Detection & arXiv 2610.02066 & Eligible (new) & Det. \\
 UQ of LLMs through Multiple Uncertainty Sources & ACL Findings 2026, 2026.findings-acl.535 & Added to corpus after search & Det. \\
 Beyond Semantic Entropy & ACL Findings 2025, 2025.findings-acl.234 & Eligible (new) & Det. \\
-Can LLMs Learn Uncertainty on Their Own? & EMNLP 2024, 2024.emnlp-main.1205 & Eligible (new) & Det. \\
+Can LLMs Learn Uncertainty on Their Own? & EMNLP 2024, 2024.emnlp-main.1205 & Added to corpus (stage 5) & Det. \\
 UQ for In-Context Learning of LLMs & NAACL 2024, 2024.naacl-long.184 & Eligible (new) & Det. \\
 Consistency-based Black-box UQ for Text-to-SQL & OpenReview ofiZbAmrZh & Eligible (new) & Det. \\
 Humans Overrely on Overconfident LMs & arXiv 2507.06306 & Eligible (new) & HC\&A \\
 What Verbalized Uncertainty in Language Models is Missing & arXiv 2507.10587 (TACL 2026 version cited) & Added to corpus after search & HC\&A \\
 Can LLMs Express Uncertainty Like Human? & arXiv 2509.24202 & Eligible (new) & HC\&A \\
 Agentic Uncertainty Quantification & arXiv 2601.15703 & Eligible (new) & HC\&A \\
-Agentic Confidence Calibration & arXiv 2601.15778 & Eligible (new) & HC\&A \\
+Agentic Confidence Calibration & arXiv 2601.15778 & Added to corpus (stage 5) & HC\&A \\
 LLMs Should Express Uncertainty Explicitly & arXiv 2604.05306 & Eligible (new) & HC\&A \\
-UQ of LLM Multi-Agent Systems (Tensor Decomposition) & arXiv 2604.08708 & Eligible (new) & HC\&A \\
+UQ of LLM Multi-Agent Systems (Tensor Decomposition) & arXiv 2604.08708 & Added to corpus (stage 5) & HC\&A \\
 Proper Scoring Rules for Agentic UQ & arXiv 2605.24756 & Eligible (new) & HC\&A \\
 Knowing but Not Showing & arXiv 2605.25284 & Eligible (new) & HC\&A \\
 Not All Uncertainty Is Equal & arXiv 2605.28571 (FAccT 2026 version cited) & Added to corpus after search & HC\&A \\
@@ -378,14 +417,14 @@ Do Agents Know When They Succeed? & arXiv 2609.09448 & Eligible (new) & HC\&A \\
 GRUET & arXiv 2609.24831 & Eligible (new) & HC\&A \\
 Clarify the User or Verify the World? & arXiv 2609.32255 & Eligible (new) & HC\&A \\
 Structured Uncertainty guided Clarification & ACL Findings 2026, 2026.findings-acl.2028 & Eligible (new) & HC\&A \\
-Impact of LMs Reluctance to Express Uncertainty & ACL 2024, 2024.acl-long.198 & Eligible (new) & HC\&A \\
+Impact of LMs Reluctance to Express Uncertainty & ACL 2024, 2024.acl-long.198 & Added to corpus (stage 5) & HC\&A \\
 Confronting verbalized uncertainty (IJHCS) & IJHCS vol. 197, 103455 & Eligible (new) & HC\&A \\
 Selective Generation for Controllable Language Models & arXiv 2307.09254 & Eligible (new) & Mit. \\
 When Do LLMs Need Retrieval Augmentation? & arXiv 2402.11457 & Eligible (new) & Mit. \\
-Adaptive Retrieval without Self-Knowledge? & arXiv 2501.12835 & Eligible (new) & Mit. \\
+Adaptive Retrieval without Self-Knowledge? & arXiv 2501.12835 & Added to corpus (stage 5) & Mit. \\
 Rewarding Doubt & arXiv 2503.02623 & Eligible (new) & Mit. \\
 Do not Abstain! Identify and Solve the Uncertainty & arXiv 2506.00780 & Eligible (new) & Mit. \\
-Beyond Binary Rewards & arXiv 2507.16806 & Eligible (new) & Mit. \\
+Beyond Binary Rewards & arXiv 2507.16806 & Added to corpus (stage 5) & Mit. \\
 TECP: Token-Entropy Conformal Prediction & arXiv 2509.00461 & Eligible (new) & Mit. \\
 Selective Risk Certification via Information-Lift & arXiv 2509.12527 & Eligible (new) & Mit. \\
 Domain-Shift-Aware Conformal Prediction for LLMs & arXiv 2510.05566 & Eligible (new) & Mit. \\
@@ -462,6 +501,150 @@ Training-time / RL-based (Section~4.3 of the article) & White-box (training-time
 \bottomrule
 \end{tabular}%
 }
+\end{center}
+
+\clearpage
+\noindent\textbf{Table S6. Screening of the 83 records left unread by the update search (stage 5, October 2026).} Classification is relevant, potentially relevant, or not relevant to the survey scope; evidence basis states what was read. The CSV file also carries the log pillar and a reason for each record. \emph{Not added} means the record was screened but not added to the 57-paper corpus (Section~2 of the article gives the rule); it is not a judgment that the record is unimportant.
+\begin{center}
+\tiny
+\begin{longtable}{@{}r p{3.0cm} p{2.0cm} p{1.5cm} p{2.3cm} p{2.6cm} p{1.2cm}@{}}
+\toprule
+\# & Record & Identifier & Class. & Evidence & Method family & Decision \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & INSIDE & arXiv 2402.03744 & Relevant & Full text read & D6 Mechanistic and internal-state probing & Added (S1 \#48) \\
+2 & Benchmarking Uncertainty with MCQ & arXiv 2406.12784 & Relevant & Full text read & D7 Benchmarking and evaluation of UQ methods & Not added \\
+3 & LLM Internal States Reveal Hallucination Risk & arXiv 2407.03282 & Relevant & Full text read & D6 Mechanistic and internal-state probing & Not added \\
+4 & Universal Truthfulness Hyperplane & arXiv 2407.08582 & Relevant & Full text read & D6 Mechanistic and internal-state probing & Not added \\
+5 & DiverseAgentEntropy & arXiv 2412.09572 & Relevant & Full text read & D3 Response consistency and similarity (black-box sampling) & Not added \\
+6 & UQ for Language Models: Scorers Suite & arXiv 2504.19254 & Relevant & Full text read & D4 Combined or learned multi-signal detectors & Not added \\
+7 & Token-Level UQ for LLM Reasoning & arXiv 2505.11737 & Relevant & Full text read & D1 Token-level and probability-based & Not added \\
+8 & Are the Hidden States Hiding Something? & arXiv 2505.16520 & Potentially relevant & Full text read & D6 Mechanistic and internal-state probing & Not added \\
+9 & Revisiting Uncertainty Estimation and Calibration & arXiv 2505.23854 & Relevant & Full text read & D7 Benchmarking and evaluation of UQ methods & Added (S1 \#49) \\
+10 & Consistency Hypothesis in UQ for LLMs & arXiv 2506.21849 & Relevant & Full text read & D3 Response consistency and similarity (black-box sampling) & Not added \\
+11 & Rehearse & arXiv 2508.14390 & Relevant & Full text read & D5 Self-verbalized and introspective confidence (prompting, no training) & Not added \\
+12 & Calibrating Verbalized Confidence with Distractors & arXiv 2509.25532 & Relevant & Full text read & D5 Self-verbalized and introspective confidence (prompting, no training) & Not added \\
+13 & Do LLMs Really Know What They Dont Know? & arXiv 2510.09033 & Potentially relevant & Full text read & D6 Mechanistic and internal-state probing & Not added \\
+14 & ADVICE & arXiv 2510.10913 & Relevant & Full text read & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+15 & Systematic Evaluation of UE Methods & arXiv 2510.20460 & Relevant & Full text read & D7 Benchmarking and evaluation of UQ methods & Not added \\
+16 & Probabilities Are All You Need & arXiv 2511.07694 & Relevant & Full text read & D1 Token-level and probability-based & Not added \\
+17 & Mathematical Analysis of Hallucination Dynamics & arXiv 2511.15005 & Potentially relevant & Full text read & D8 Other settings (theory, function calling, diffusion LMs, in-context learning) & Not added \\
+18 & Fact-Checking via Probabilistic Certainty and Consistency & arXiv 2601.02574 & Relevant & Full text read & D4 Combined or learned multi-signal detectors & Not added \\
+19 & Semantic UQ of Hallucinations: Quantum Tensor Network & arXiv 2601.20026 & Relevant & Full text read & D2 Semantic uncertainty (clustering, kernel, entropy) & Not added \\
+20 & Benchmarking Calibration in Long-Form QA & arXiv 2602.00279 & Relevant & Full text read & D7 Benchmarking and evaluation of UQ methods & Not added \\
+21 & Benchmark of Uncertainty Metrics for Automatic Grading & arXiv 2602.16039 & Relevant & Abstract (via fetch tool summary) & D7 Benchmarking and evaluation of UQ methods & Not added \\
+22 & UE Scales with Sampling in Reasoning Models & arXiv 2603.19118 & Relevant & Abstract (via fetch tool summary) & D5 Self-verbalized and introspective confidence (prompting, no training) & Not added \\
+23 & Adaptive Bayesian Estimation of Semantic Entropy & arXiv 2603.22812 & Relevant & Abstract (via fetch tool summary) & D2 Semantic uncertainty (clustering, kernel, entropy) & Not added \\
+24 & Closing the Confidence-Faithfulness Gap & arXiv 2603.25052 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+25 & UQ for LLM Function-Calling & arXiv 2604.22985 & Relevant & Abstract (via fetch tool summary) & D8 Other settings (theory, function calling, diffusion LMs, in-context learning) & Not added \\
+26 & ORCE & arXiv 2605.12446 & Relevant & Partial: secondary page, short description only & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+27 & UQ for Large Language Diffusion Models & arXiv 2605.14570 & Potentially relevant & Abstract (via fetch tool summary) & D8 Other settings (theory, function calling, diffusion LMs, in-context learning) & Not added \\
+28 & MultiHaluDet & arXiv 2605.24919 & Potentially relevant & Partial: secondary page, short description only & D6 Mechanistic and internal-state probing & Not added \\
+29 & Entropy Distribution as Fingerprint for Hallucinations & arXiv 2605.28264 & Relevant & Abstract (via fetch tool summary) & D1 Token-level and probability-based & Not added \\
+30 & BEACON & arXiv 2606.07528 & Relevant & Abstract (via fetch tool summary) & D4 Combined or learned multi-signal detectors & Not added \\
+31 & Systematic Evaluation of Black-Box UE & arXiv 2606.19868 & Relevant & Abstract (via fetch tool summary) & D7 Benchmarking and evaluation of UQ methods & Not added \\
+32 & The Origins of Stochasticity: UQ for LLMs & arXiv 2606.22792 & Relevant & Abstract (via fetch tool summary) & D7 Benchmarking and evaluation of UQ methods & Not added \\
+33 & Hallucination Detection using Diversion Decoding & arXiv 2607.10476 & Relevant & Abstract (via fetch tool summary) & D3 Response consistency and similarity (black-box sampling) & Not added \\
+34 & ConfidenceBench & arXiv 2607.20526 & Relevant & Abstract (via fetch tool summary) & D7 Benchmarking and evaluation of UQ methods & Not added \\
+35 & Propagating Uncertainty Across Reasoning and Retrieval & arXiv 2607.25600 & Relevant & Abstract (via fetch tool summary) & M4 Uncertainty-triggered retrieval & Not added \\
+36 & Claim-Level Confidence Calibration & arXiv 2608.22483 & Relevant & Abstract (via fetch tool summary) & D5 Self-verbalized and introspective confidence (prompting, no training) & Not added \\
+37 & Truthfulness Signal in Code-Mixing & arXiv 2609.22138 & Provisional (title only) - potentially relevant & None - title only & D6 Mechanistic and internal-state probing & Not added \\
+38 & Cross-Model Span-Level Hallucination Detection & arXiv 2610.02066 & Cannot classify yet (no abstract) & None - title only & unassigned & Not added \\
+39 & Beyond Semantic Entropy & ACL Findings 2025, 2025.findings-acl.234 & Relevant & Abstract (via fetch tool summary) & D2 Semantic uncertainty (clustering, kernel, entropy) & Not added \\
+40 & Can LLMs Learn Uncertainty on Their Own? & EMNLP 2024, 2024.emnlp-main.1205 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Added (S1 \#52) \\
+41 & UQ for In-Context Learning of LLMs & NAACL 2024, 2024.naacl-long.184 & Relevant & Abstract (via fetch tool summary) & D8 Other settings (theory, function calling, diffusion LMs, in-context learning) & Not added \\
+42 & Consistency-based Black-box UQ for Text-to-SQL & OpenReview ofiZbAmrZh & Relevant & Abstract via IBM page (page text mismatched its title; moderate confidence) & D3 Response consistency and similarity (black-box sampling) & Not added \\
+43 & Humans Overrely on Overconfident LMs & arXiv 2507.06306 & Relevant & Abstract (via fetch tool summary) & H2 Human studies and interfaces & Not added \\
+44 & Can LLMs Express Uncertainty Like Human? & arXiv 2509.24202 & Relevant & Abstract (via fetch tool summary) & D5 Self-verbalized and introspective confidence (prompting, no training) & Not added \\
+45 & Agentic Uncertainty Quantification & arXiv 2601.15703 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+46 & Agentic Confidence Calibration & arXiv 2601.15778 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Added (S1 \#54) \\
+47 & LLMs Should Express Uncertainty Explicitly & arXiv 2604.05306 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+48 & UQ of LLM Multi-Agent Systems (Tensor Decomposition) & arXiv 2604.08708 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Added (S1 \#55) \\
+49 & Proper Scoring Rules for Agentic UQ & arXiv 2605.24756 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+50 & Knowing but Not Showing & arXiv 2605.25284 & Cannot classify yet (no abstract) & None - title only & unassigned & Not added \\
+51 & Linguistic Uncertainty Markers and Intrinsic Confidence & arXiv 2605.28778 & Relevant & Abstract (via fetch tool summary) & D5 Self-verbalized and introspective confidence (prompting, no training) & Not added \\
+52 & Confidence Laundering in Agent Systems & arXiv 2606.20662 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+53 & U-Lens & arXiv 2607.10604 & Relevant & Abstract (via fetch tool summary) & H2 Human studies and interfaces & Not added \\
+54 & Trajectory-Adapted UQ for LLM Agents & arXiv 2608.11552 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+55 & Relational Uncertainty Propagation for Agents & arXiv 2608.16002 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+56 & PropUQ-MAS & arXiv 2608.22130 & Provisional (title only) - relevant & None - title only & H1 Agent and multi-agent trajectory UQ & Not added \\
+57 & UQ for LLM Agents: Taxonomy and Empirical Study & arXiv 2609.07395 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+58 & Do Agents Know When They Succeed? & arXiv 2609.09448 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+59 & GRUET & arXiv 2609.24831 & Relevant & Abstract (via fetch tool summary) & H1 Agent and multi-agent trajectory UQ & Not added \\
+60 & Clarify the User or Verify the World? & arXiv 2609.32255 & Cannot classify yet (no abstract) & None - title only & unassigned & Not added \\
+61 & Structured Uncertainty guided Clarification & ACL Findings 2026, 2026.findings-acl.2028 & Relevant & Abstract (via fetch tool summary) & H3 Clarification under uncertainty & Not added \\
+62 & Impact of LMs Reluctance to Express Uncertainty & ACL 2024, 2024.acl-long.198 & Relevant & Abstract (via fetch tool summary) & H2 Human studies and interfaces & Added (S1 \#57) \\
+63 & Confronting verbalized uncertainty (IJHCS) & IJHCS vol. 197, 103455 & Provisional (title only) - relevant & None - title only & H2 Human studies and interfaces & Not added \\
+64 & Selective Generation for Controllable Language Models & arXiv 2307.09254 & Relevant & Abstract (via fetch tool summary) & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+65 & When Do LLMs Need Retrieval Augmentation? & arXiv 2402.11457 & Relevant & Abstract (via fetch tool summary) & M4 Uncertainty-triggered retrieval & Not added \\
+66 & Adaptive Retrieval without Self-Knowledge? & arXiv 2501.12835 & Relevant & Abstract (via fetch tool summary) & M4 Uncertainty-triggered retrieval & Added (S1 \#53) \\
+67 & Rewarding Doubt & arXiv 2503.02623 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+68 & Do not Abstain! Identify and Solve the Uncertainty & arXiv 2506.00780 & Relevant & Abstract (via fetch tool summary) & M3 Abstention policies (prompt-level or learned) & Not added \\
+69 & Beyond Binary Rewards & arXiv 2507.16806 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Added (S1 \#51) \\
+70 & TECP: Token-Entropy Conformal Prediction & arXiv 2509.00461 & Relevant & Abstract (via fetch tool summary) & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+71 & Selective Risk Certification via Information-Lift & arXiv 2509.12527 & Relevant & Abstract (via fetch tool summary) & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+72 & Domain-Shift-Aware Conformal Prediction for LLMs & arXiv 2510.05566 & Relevant & Abstract (via fetch tool summary) & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+73 & Behaviorally Calibrated RL & arXiv 2512.19920 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+74 & Calibration Aware RL & arXiv 2601.13284 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+75 & Black-Box Reliability Certification for Agents & arXiv 2602.21368 & Relevant & Abstract (via fetch tool summary) & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+76 & I-CALM & arXiv 2604.03904 & Relevant & Abstract (via fetch tool summary) & M3 Abstention policies (prompt-level or learned) & Not added \\
+77 & Geometry-Calibrated Conformal Abstention & arXiv 2604.27914 & Relevant & Partial: secondary page, short description only & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+78 & Calibrating LLMs with Semantic-level Reward & arXiv 2605.15588 & Relevant & Partial: secondary page, short description only & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+79 & Agentic Tool-Calling via Uncertainty-Aligned RL & arXiv 2606.06976 & Relevant & Partial: secondary page, short description only & H1 Agent and multi-agent trajectory UQ & Not added \\
+80 & RL with Metacognitive Feedback & arXiv 2606.32032 & Relevant & Abstract (via fetch tool summary) & M2 Training for calibrated confidence (RL, fine-tuning, steering) & Not added \\
+81 & Uncertainty-Aware Abstention with Provable Guarantees & arXiv 2607.04430 & Relevant & Abstract (via fetch tool summary) & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+82 & Hierarchical Group-Conditional Conformal Risk Control & arXiv 2607.24562 & Relevant & Abstract (via fetch tool summary) & M1 Conformal prediction, risk control and certified selective prediction & Not added \\
+83 & Can Language Models Learn When to Abstain? & arXiv 2610.13821 & Relevant & Abstract (via fetch tool summary) & M3 Abstention policies (prompt-level or learned) & Not added \\
+\end{longtable}
+\end{center}
+
+\noindent\textbf{Table S7. Method families: approximate corpus counts before and after stage 5, and records among the 83.} Counts are approximate because several papers belong to more than one family; item numbers refer to Table S6. Kapoor et al.\ (trained estimator) is counted under D5 although the family name says ``no training.
+\begin{center}
+\tiny
+\begin{longtable}{@{}p{3.6cm} r r r p{2.0cm} p{1.9cm}@{}}
+\toprule
+Method family & In 45 & In 57 & Among 83 & Added in stage 5 & Item numbers (S6) \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+D1 Token-level and probability-based & 3 & 3 & 3 & 0 & 7, 16, 29 \\
+D2 Semantic uncertainty (clustering, kernel, entropy) & 4 & 4 & 3 & 0 & 19, 23, 39 \\
+D3 Response consistency and similarity (black-box sampling) & 5 & 5 & 4 & 0 & 5, 10, 33, 42 \\
+D4 Combined or learned multi-signal detectors & 0 & 0 & 3 & 0 & 6, 18, 30 \\
+D5 Self-verbalized and introspective confidence (prompting, no training) & 4 & 6 & 6 & 0 / 2 (Tian; Kapoor) & 11, 12, 22, 36, 44, 51 \\
+D6 Mechanistic and internal-state probing & 3 & 4 & 7 & 1 / 0 & 1, 3, 4, 8, 13, 28, 37 \\
+D7 Benchmarking and evaluation of UQ methods & 2 & 3 & 8 & 1 / 0 & 2, 9, 15, 20, 21, 31, 32, 34 \\
+D8 Other settings (theory, function calling, diffusion LMs, in-context learning) & 0 & 0 & 4 & 0 & 17, 25, 27, 41 \\
+M1 Conformal prediction, risk control and certified selective prediction & 6 & 7 & 8 & 0 / 1 (Mohri) & 64, 70, 71, 72, 75, 77, 81, 82 \\
+M2 Training for calibrated confidence (RL, fine-tuning, steering) & 2 & 4 & 11 & 2 / 0 & 14, 24, 26, 40, 47, 67, 69, 73, 74, 78, 80 \\
+M3 Abstention policies (prompt-level or learned) & 0 & 0 & 3 & 0 & 68, 76, 83 \\
+M4 Uncertainty-triggered retrieval & 2 & 3 & 3 & 1 / 0 & 35, 65, 66 \\
+H1 Agent and multi-agent trajectory UQ & 3 & 5 & 12 & 2 / 0 & 45, 46, 48, 49, 52, 54, 55, 56, 57, 58, 59, 79 \\
+H2 Human studies and interfaces & 4 & 6 & 4 & 1 / 1 (Steyvers) & 43, 53, 62, 63 \\
+H3 Clarification under uncertainty & 0 & 0 & 1 & 0 & 61 \\
+\end{longtable}
+\end{center}
+
+\noindent\textbf{Table S8. Gap-analysis verification log (stage 5).} The four foundational additions (Tian et al., Mohri and Hashimoto, Kapoor et al., Steyvers et al.) were chosen by a gap analysis against known foundational work and Table S7, not by a logged discovery search. Web searches then confirmed that each exists, is peer-reviewed or posted as stated, and is absent from the 45-paper corpus and from the 83 records. The strings of those earlier verification searches were not logged and are not reproduced here; the eight rows above are the queries recorded for this stage.
+\begin{center}
+\small
+\begin{tabular}{@{}r p{7.2cm} p{4.2cm}@{}}
+\toprule
+\# & Query string & Purpose \\
+\midrule
+1 & Beyond Binary Rewards: Training LMs to Reason About Their Uncertainty RLCR arxiv pdf & Locate full text (item 69) \\
+2 & Revisiting Uncertainty Estimation and Calibration of Large Language Models arXiv 2505.23854 pdf & Locate full text (item 9) \\
+3 & Kapoor Large language models must be taught to know what they don't know arxiv 2406.08391 html full text & Verify existence and locate full text (foundational, not in update search) \\
+4 & Can LLMs Learn Uncertainty on Their Own? Expressing Uncertainty Effectively in a Self-Training Manner EMNLP 2024 & Locate text (item 40); only abstract found \\
+5 & Relying on the Unreliable: The Impact of Language Models' Reluctance to Express Uncertainty Zhou Jurafsky Hashimoto ACL 2024 arxiv & Locate full text (item 62) \\
+6 & Steyvers Tejeda Kumar Belem Karny Hu Mayer Smyth large language models know what people think they know calibration gap discrimination gap & Verify title and venue (foundational, not in update search) \\
+7 & ``Adaptive Retrieval without Self-Knowledge? Bringing Uncertainty Back Home'' ACL 2025 & Verify venue (item 66) \\
+8 & ``Revisiting Uncertainty Estimation and Calibration of Large Language Models'' NeurIPS 2025 Tao Yeh Dong Huang Torr Xu & Verify venue (item 9) \\
+\bottomrule
+\end{tabular}
 \end{center}
 
 \bibliographystyle{ACM-Reference-Format}

@@ -1,5 +1,5 @@
 Record (abbreviated title),Identifier,Disposition,Pillar
-INSIDE,arXiv 2402.03744,Eligible (new),Det.
+INSIDE,arXiv 2402.03744,Added to corpus (stage 5),Det.
 Benchmarking Uncertainty with MCQ,arXiv 2406.12784,Eligible (new),Det.
 LLM Internal States Reveal Hallucination Risk,arXiv 2407.03282,Eligible (new),Det.
 Universal Truthfulness Hyperplane,arXiv 2407.08582,Eligible (new),Det.
@@ -8,7 +8,7 @@ DiverseAgentEntropy,arXiv 2412.09572,Eligible (new),Det.
 UQ for Language Models: Scorers Suite,arXiv 2504.19254,Eligible (new),Det.
 Token-Level UQ for LLM Reasoning,arXiv 2505.11737,Eligible (new),Det.
 Are the Hidden States Hiding Something?,arXiv 2505.16520,Eligible (new),Det.
-Revisiting Uncertainty Estimation and Calibration,arXiv 2505.23854,Eligible (new),Det.
+Revisiting Uncertainty Estimation and Calibration,arXiv 2505.23854,Added to corpus (stage 5),Det.
 Consistency Hypothesis in UQ for LLMs,arXiv 2506.21849,Eligible (new),Det.
 Rehearse,arXiv 2508.14390,Eligible (new),Det.
 Calibrating Verbalized Confidence with Distractors,arXiv 2509.25532,Eligible (new),Det.
@@ -40,16 +40,16 @@ Truthfulness Signal in Code-Mixing,arXiv 2609.22138,Eligible (new),Det.
 Cross-Model Span-Level Hallucination Detection,arXiv 2610.02066,Eligible (new),Det.
 UQ of LLMs through Multiple Uncertainty Sources,"ACL Findings 2026, 2026.findings-acl.535",Added to corpus after search,Det.
 Beyond Semantic Entropy,"ACL Findings 2025, 2025.findings-acl.234",Eligible (new),Det.
-Can LLMs Learn Uncertainty on Their Own?,"EMNLP 2024, 2024.emnlp-main.1205",Eligible (new),Det.
+Can LLMs Learn Uncertainty on Their Own?,"EMNLP 2024, 2024.emnlp-main.1205",Added to corpus (stage 5),Det.
 UQ for In-Context Learning of LLMs,"NAACL 2024, 2024.naacl-long.184",Eligible (new),Det.
 Consistency-based Black-box UQ for Text-to-SQL,OpenReview ofiZbAmrZh,Eligible (new),Det.
 Humans Overrely on Overconfident LMs,arXiv 2507.06306,Eligible (new),HC\,A
 What Verbalized Uncertainty in Language Models is Missing,arXiv 2507.10587 (TACL 2026 version cited),Added to corpus after search,HC\,A
 Can LLMs Express Uncertainty Like Human?,arXiv 2509.24202,Eligible (new),HC\,A
 Agentic Uncertainty Quantification,arXiv 2601.15703,Eligible (new),HC\,A
-Agentic Confidence Calibration,arXiv 2601.15778,Eligible (new),HC\,A
+Agentic Confidence Calibration,arXiv 2601.15778,Added to corpus (stage 5),HC\,A
 LLMs Should Express Uncertainty Explicitly,arXiv 2604.05306,Eligible (new),HC\,A
-UQ of LLM Multi-Agent Systems (Tensor Decomposition),arXiv 2604.08708,Eligible (new),HC\,A
+UQ of LLM Multi-Agent Systems (Tensor Decomposition),arXiv 2604.08708,Added to corpus (stage 5),HC\,A
 Proper Scoring Rules for Agentic UQ,arXiv 2605.24756,Eligible (new),HC\,A
 Knowing but Not Showing,arXiv 2605.25284,Eligible (new),HC\,A
 Not All Uncertainty Is Equal,arXiv 2605.28571 (FAccT 2026 version cited),Added to corpus after search,HC\,A
@@ -64,14 +64,14 @@ Do Agents Know When They Succeed?,arXiv 2609.09448,Eligible (new),HC\,A
 GRUET,arXiv 2609.24831,Eligible (new),HC\,A
 Clarify the User or Verify the World?,arXiv 2609.32255,Eligible (new),HC\,A
 Structured Uncertainty guided Clarification,"ACL Findings 2026, 2026.findings-acl.2028",Eligible (new),HC\,A
-Impact of LMs Reluctance to Express Uncertainty,"ACL 2024, 2024.acl-long.198",Eligible (new),HC\,A
+Impact of LMs Reluctance to Express Uncertainty,"ACL 2024, 2024.acl-long.198",Added to corpus (stage 5),HC\,A
 Confronting verbalized uncertainty (IJHCS),"IJHCS vol. 197, 103455",Eligible (new),HC\,A
 Selective Generation for Controllable Language Models,arXiv 2307.09254,Eligible (new),Mit.
 When Do LLMs Need Retrieval Augmentation?,arXiv 2402.11457,Eligible (new),Mit.
-Adaptive Retrieval without Self-Knowledge?,arXiv 2501.12835,Eligible (new),Mit.
+Adaptive Retrieval without Self-Knowledge?,arXiv 2501.12835,Added to corpus (stage 5),Mit.
 Rewarding Doubt,arXiv 2503.02623,Eligible (new),Mit.
 Do not Abstain! Identify and Solve the Uncertainty,arXiv 2506.00780,Eligible (new),Mit.
-Beyond Binary Rewards,arXiv 2507.16806,Eligible (new),Mit.
+Beyond Binary Rewards,arXiv 2507.16806,Added to corpus (stage 5),Mit.
 TECP: Token-Entropy Conformal Prediction,arXiv 2509.00461,Eligible (new),Mit.
 Selective Risk Certification via Information-Lift,arXiv 2509.12527,Eligible (new),Mit.
 Domain-Shift-Aware Conformal Prediction for LLMs,arXiv 2510.05566,Eligible (new),Mit.

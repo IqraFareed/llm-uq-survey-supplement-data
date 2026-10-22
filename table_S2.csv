@@ -44,3 +44,15 @@
 43,Badshah et al.,2026,single,-,open-ended,coverage/risk,yes
 44,Villavicencio et al.,2026,single,yes,non-QA,other,-
 45,Ulmer et al.,2026,single,-,open-ended,calibration,-
+46,Tian et al.,2023,single,-,open-ended,calibration,-
+47,Kapoor et al.,2024,single,yes,mixed,calibration,-
+48,Chen et al. (INSIDE),2024,single,-,open-ended,discrimination,-
+49,Tao et al.,2025,single,-,fixed-choice,calibration,-
+50,Mohri and Hashimoto,2024,single,-,open-ended,coverage/risk,yes
+51,Damani et al.,2026,single,-,mixed,calibration,-
+52,Liu et al. (UaIT),2024,single,-,open-ended,other,-
+53,Moskvoretskii et al.,2025,single,-,open-ended,other,-
+54,Zhang et al. (HTC),2026,agentic,-,non-QA,calibration,-
+55,Chen et al. (MATU),2026,agentic,-,non-QA,discrimination,-
+56,Steyvers et al.,2024,single,yes,mixed,calibration,-
+57,Zhou et al.,2024,single,yes,mixed,other,-
